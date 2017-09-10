@@ -1,3 +1,14 @@
+" Vundle
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'elzr/vim-json'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Valloric/YouCompleteMe'
+call vundle#end()
+
 " Formatting
 set expandtab
 set softtabstop=4
@@ -31,13 +42,7 @@ noremap <F6>    <C-W>j<C-W>_    " Go to next window and maximize it
 noremap <C-f>   <C-W>j<C-W>_    " Go to next window and maximize it
 noremap <F7>    <C-W>=          " Make all windows equal
 noremap <F8>    <C-W>_          " Maximize current window
-noremap <F10>   :set tw=0 nowrap<CR>
-noremap <C-d>   :!debug -n<CR>
-noremap ;   :!php -l %<CR>
-"noremap "  :!wm-admin-checkjs %<CR>
 inoremap <C-c>  <c-p>
-map ,# :s/^/#/<CR>  " block commenting with #
-map ,c :s/^#//<CR>
 
 syntax on
 set number
